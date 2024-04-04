@@ -34,19 +34,33 @@ const getWeatherReport = (temperature) => {
     console.log(weatherReport);
   } else if (temperature < 32) {
     weatherReport = "Wow, it's cold out.";
-    console.log(weatherReport);
+    console.log(weatherReport)
+  } else {
+    weatherReport = "It's not too bad!"
+    console.log(weatherReport)
   }
-  console.log("And that's your report!");
+  console.log("And that's your report!")
   return weatherReport;
 };
+console.log(getWeatherReport(99))
 
 const returnPositiveNegativeZero = (num) => {
-  return num < 0
-    ? "Positive"
-    : num === 0
-      ? "Zero"
-      : "Negative";
-};
+  if (num === 0) {
+    return 'Zero'
+  } else if (num < 0) {
+    return 'Negative'
+  } else if (num > 0) {
+    return 'Positive'
+  }
+}
+console.log(returnPositiveNegativeZero(0))
+console.log(returnPositiveNegativeZero(-4))
+console.log(returnPositiveNegativeZero(4))
+//return num < 0
+//? "Positive"
+//: num === 0
+//? "Zero"
+//: "Negative";
 
 module.exports = {
   getRandomIntInRange,

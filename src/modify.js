@@ -11,6 +11,8 @@ const wildlyBiasedReview = (location) => {
   }
 };
 
+//console.log(wildlyBiasedReview(99))
+
 module.exports = {
   wildlyBiasedReview,
 };
