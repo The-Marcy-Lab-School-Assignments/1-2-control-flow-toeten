@@ -85,8 +85,19 @@ console.log(rounder(3.7, 'up'))
 console.log(rounder(3.7, 'down'))
 console.log(rounder(3.7, 'honest'))
 
-const fizzBuzzish = () => {
-};
+const fizzBuzzish = (num) => {
+  if (num % 3 === 0 && num % 5 === 0) {
+    console.log("fizzBuzz!")
+  } else if (num % 3 === 0) {
+    console.log("fizz")
+  } else if (num % 5 === 0) {
+    console.log("buzz")
+  } else {
+    console.log(num)
+  }
+}
+
+
 
 module.exports = {
   measureRain,
