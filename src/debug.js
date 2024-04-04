@@ -3,9 +3,11 @@ const getRandomIntInRange = (min, max) => {
   return Math.floor(Math.random() * (max - min)) + min;
 };
 console.log(getRandomIntInRange(1, 5))
+
 const coolnessGauge = (numOfFridges) => {
-  return numOfFridges > 5 ? 'You need more fridges.' : 'You are downright chilly!';
+  return numOfFridges <= 3 ? 'You need more fridges.' : 'You are downright chilly!';
 };
+console.log(coolnessGauge(5))
 
 const funkoPopAddictionLevel = (numOfFunkoPops) => {
   if (numOfFunkoPops === 0) {
