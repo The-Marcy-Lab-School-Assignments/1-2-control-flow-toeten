@@ -67,8 +67,23 @@ funTypes(5 === 5)
 funTypes(["fruit", "vegetables", "minerals"])
 funTypes(undefined)
 
-const rounder = () => {
+const rounder = (float, roundingSetting) => {
+  if (roundingSetting === 'up') {
+    return Math.ceil(float)
+  } else if (roundingSetting === 'down') {
+    return Math.floor(float)
+  } else if (roundingSetting === 'honest') {
+    const deciHonest = float % 1
+    if (deciHonest < 0.5) {
+      return Math.floor(float)
+    } else {
+      return Math.ceil(float)
+    }
+  }
 };
+console.log(rounder(3.7, 'up'))
+console.log(rounder(3.7, 'down'))
+console.log(rounder(3.7, 'honest'))
 
 const fizzBuzzish = () => {
 };
