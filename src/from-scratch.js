@@ -73,12 +73,7 @@ const rounder = (float, roundingSetting) => {
   } else if (roundingSetting === 'down') {
     return Math.floor(float)
   } else if (roundingSetting === 'honest') {
-    const deciHonest = float % 1
-    if (deciHonest < 0.5) {
-      return Math.floor(float)
-    } else {
-      return Math.ceil(float)
-    }
+    return Math.round(float)
   }
 };
 console.log(rounder(3.7, 'up'))

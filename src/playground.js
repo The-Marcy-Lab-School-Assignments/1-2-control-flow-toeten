@@ -89,3 +89,32 @@ funTypes(5)
 funTypes(5 === 5)
 funTypes(["fruit", "vegetables", "minerals"])
 funTypes(undefined)
+
+
+const rounder = (float, roundingSetting) => {
+    if (roundingSetting === 'up') {
+        return Math.ceil(float)
+    } else if (roundingSetting === 'down') {
+        return Math.floor(float)
+    } else if (roundingSetting === 'honest') {
+        return Math.round(float)
+    }
+};
+
+console.log(rounder(4.8, 'up'))
+
+//og
+/* const rounder = (float, roundingSetting) => {
+    if (roundingSetting === 'up') {
+      return Math.ceil(float)
+    } else if (roundingSetting === 'down') {
+      return Math.floor(float)
+    } else if (roundingSetting === 'honest') {
+      const deciHonest = float % 1
+      if (deciHonest < 0.5) {
+        return Math.floor(float)
+      } else {
+        return Math.ceil(float)
+      }
+    }
+  }; */
