@@ -19,7 +19,7 @@ measureRain(3)
 const happyBirthdayPet = (breed, age) => {
   if (breed === 'snake') {
     console.log('Hiss hiss!')
-  } else if (breed === 'cat' & age < 5) {
+  } else if (breed === 'cat' && age < 5) {
     console.log('Mew mew!')
   } else if (breed === 'cat' && age >= 5) {
     console.log('Meow meow!')
